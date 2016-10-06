@@ -62,10 +62,11 @@ Box.volume +=1;
 
 
 //Create a button that prints the object and its attributes to the page (use the span "output".
-var printBox = document.getElementById("output");
+var printBox = document.getElementById("Print");
 
 printBox.onclick=function () {
-console.log(Box);
+console.dir("span"+Box);
+
 };
 
  
