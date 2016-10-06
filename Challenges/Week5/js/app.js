@@ -1,16 +1,4 @@
-/*  function addPokemon(name) {
-    $(`
-        <li class="poke-card">
-            <h3 class="name">${name}</h3>
-        </li>
-    `).appendTo('#pokemon');
-};*/
-
-var pokeAPI = "http://pokeapi.co/api/v2/limit=20&offset=20";
-var pokeOptions = {
-format : "json"
-},
-function addPokemon(name) {
+  function addPokemon(name) {
     $(`
         <li class="poke-card">
             <h3 class="name">${name}</h3>
@@ -18,8 +6,17 @@ function addPokemon(name) {
     `).appendTo('#pokemon');
 };
 
+var pokeAPI = "http://pokeapi.co/api/v2/pokemon/?limit=20";
+/*function addPokemon(name) {
+    $(`
+        <li class="poke-card">
+            <h3 class="name">${name}</h3>
+        </li>
+    `).appendTo('#pokemon');
+};*/
 
-$.getJSON(pokeAPI, pokeOptions, addPokemon );
+
+$.getJSON(pokeAPI, addPokemon);
 // 1.)  Use the PokéAPI from http://pokeapi.co along with jQuery's getJSON function to retrieve the first 20 Pokémon.
 // 1.1)  Use the addPokemon function to show each of the Pokémon names that were retrieved.  
 //Hint: Learn how to access resources via the documentation http://pokeapi.co/docsv2/#resource-lists
