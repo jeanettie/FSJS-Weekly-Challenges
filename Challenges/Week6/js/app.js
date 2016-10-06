@@ -60,7 +60,14 @@ Box.volume +=1;
 
 
 
+
 //Create a button that prints the object and its attributes to the page (use the span "output".
+var printBox = document.getElementById("output");
+
+printBox.onclick=function () {
+console.log(Box);
+};
+
  
 //Extra credit
 //Create interactive buttons to decrease or increase the Width and Volume
